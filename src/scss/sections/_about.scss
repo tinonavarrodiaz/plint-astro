@@ -1,0 +1,44 @@
+.About {
+  height: 100vh;
+  margin-bottom: 0;
+  background: hsl(345, 6%, 13%);
+  color: #fdfdfd;
+  padding-top: 5em;
+  padding-bottom: 5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1vw;
+  h2 {
+    text-align: center;
+    font-size: 5vw;
+    margin-bottom: 5vw;
+  }
+  img {
+    border-radius: 0.5em;
+    box-shadow: 5px 5px 10px rgba(#fff, 0.2);
+  }
+  &__grid {
+    @include from(l) {
+      padding: 0 10vw;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+      justify-content: center;
+      column-gap: 5vw;
+    }
+  }
+}
+.icon-down,
+.icon-up {
+  scale: 3;
+  position: absolute;
+  bottom: 3em;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.icon-up {
+  bottom: unset;
+  top: 3em;
+}

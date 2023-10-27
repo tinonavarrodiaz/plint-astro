@@ -1,0 +1,41 @@
+---
+import Mail from './Mail.astro';
+import Phone from './Phone.astro';
+import Up from './Up.astro';
+---
+
+<section class="Contact" id="contacto">
+  <Up to="#somos" />
+  <div class="Contact__grid">
+    <form action="/php/send.php" method="post">
+      <div class="input-group">
+        <input type="text" name="name" id="name" placeholder=" " />
+        <label for="name">Nombre:</label>
+      </div>
+      <div class="input-group">
+        <input type="email" name="email" id="email" placeholder=" " />
+        <label for="email">Email:</label>
+      </div>
+      <div class="input-group textarea">
+        <textarea name="msg" id="msg" placeholder=" "></textarea>
+        <label for="msg">Mensaje:</label>
+      </div>
+      <footer class="footer-form">
+        <button type="submit">Enviar</button>
+      </footer>
+    </form>
+    <div class="Contact__data">
+      <img src="/logo-home.png" alt="Logotipo Plint" />
+      <h1>PLANIFICACION E INFRAESTRUCTURA TERRESTRE S.A. DE C.V.</h1>
+      <div class="Contact__address">
+        <p>
+          Calz. Lázaro Cárdenas 3333-piso 1 interior 2, Chapalita, 44500
+          Guadalajara, Jal.
+        </p>
+        <a href="mailto:contacto@plint.com.mx"><Mail /> contacto@plint.com.mx</a
+        >
+        <a class="phone" href="tel:3336152823"><Phone /> 33 3615 2823</a>
+      </div>
+    </div>
+  </div>
+</section>
